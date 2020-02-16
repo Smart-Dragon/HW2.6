@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Fz-OM-Za3">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="uyP-Hd-LPM">
+            <objects>
+                <viewController id="5Fz-OM-Za3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7XR-to-i7T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKF-OM-YcU">
+                                <rect key="frame" x="80" y="229.5" width="215.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-Q1-JSO">
+                                <rect key="frame" x="152.5" y="303.5" width="70.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78488261280000005" green="0.99336069819999995" blue="0.95719770280000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lk1-Q1-JSO" firstAttribute="centerX" secondItem="7XR-to-i7T" secondAttribute="centerX" id="Wpn-Mc-TDu"/>
+                            <constraint firstItem="wKF-OM-YcU" firstAttribute="centerX" secondItem="7XR-to-i7T" secondAttribute="centerX" id="kyY-7K-2qI"/>
+                            <constraint firstItem="wKF-OM-YcU" firstAttribute="centerY" secondItem="7XR-to-i7T" secondAttribute="centerY" constant="-80" id="rT6-2b-7ld"/>
+                            <constraint firstItem="lk1-Q1-JSO" firstAttribute="centerY" secondItem="7XR-to-i7T" secondAttribute="centerY" id="uDX-dp-C8Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hyG-cJ-AbT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dK5-Hh-70t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="364"/>
+        </scene>
+    </scenes>
+</document>
