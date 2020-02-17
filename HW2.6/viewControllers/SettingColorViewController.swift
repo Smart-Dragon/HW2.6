@@ -57,7 +57,6 @@ final class SettingColorViewController: UIViewController {
         
         selectColor()
         changeColor()
-        
     }
     
     // MARK: - IBActions
@@ -126,7 +125,6 @@ final class SettingColorViewController: UIViewController {
     private func setupSlider(slider: UISlider, color: UIColor) {
         slider.minimumTrackTintColor = color
         slider.maximumTrackTintColor = .lightGray
-        
     }
     
     private func selectColor() {
@@ -190,8 +188,7 @@ final class SettingColorViewController: UIViewController {
             redSlider.setValue(red, animated: true)
             greenSlider.setValue(green, animated: true)
             blueSlider.setValue(blue, animated: true)
-        }
-        else{
+        } else{
             showError("Убедитесь, что вы вводите дробное число без ошибок")
         }
         
