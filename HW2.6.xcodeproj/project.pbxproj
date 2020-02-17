@@ -63,10 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				9BAD8CCD23FA863400DCE0AE /* protocols */,
-				9BAD8CCC23FA855100DCE0AE /* storyboards */,
 				9B0D54E823E46FFE000B2AE9 /* extensions */,
-				9BAD8CCA23FA854200DCE0AE /* MainViewController.swift */,
-				9B0D54D823E44A09000B2AE9 /* SettingColorViewController.swift */,
+				9BAD8CD023FAAAB200DCE0AE /* viewControllers */,
+				9BAD8CCC23FA855100DCE0AE /* storyboards */,
 				9B0D54D423E44A09000B2AE9 /* AppDelegate.swift */,
 				9B0D54DD23E44A0F000B2AE9 /* Assets.xcassets */,
 				9B0D54E223E44A0F000B2AE9 /* Info.plist */,
@@ -98,6 +97,15 @@
 				9BAD8CCE23FA865000DCE0AE /* SettingColorProtocol.swift */,
 			);
 			path = protocols;
+			sourceTree = "<group>";
+		};
+		9BAD8CD023FAAAB200DCE0AE /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9BAD8CCA23FA854200DCE0AE /* MainViewController.swift */,
+				9B0D54D823E44A09000B2AE9 /* SettingColorViewController.swift */,
+			);
+			path = viewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
