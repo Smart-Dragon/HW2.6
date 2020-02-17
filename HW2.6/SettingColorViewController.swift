@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class SettingColorViewController: UIViewController {
 
     // MARK: - IBOutlets
     
@@ -30,9 +30,14 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
     
+    // MARK: - Public Properties
+    
+    var delegate: SettingColorProtocol!
+    var selectedColor: UIColor = .white
+    
     // MARK: - Private Properties
     
-    private let digitalFont = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: UIFont.Weight.regular)
+    private let digitalFont = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .regular)
     
     // MARK: - Lifecycle
     
@@ -46,7 +51,25 @@ final class ViewController: UIViewController {
         setupTitleLabels()
         setupTextFields()
         setupSliders()
+        
+        selectColor()
         changeColor()
+        
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func changeColorAction() {
+        changeColor()
+    }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func doneButtonAction(_ sender: Any) {
+        delegate.setColor(colorView.backgroundColor ?? .white)
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Private Methods
@@ -92,15 +115,27 @@ final class ViewController: UIViewController {
     }
     
     private func setupSliders() {
-        setupSlider(slider: redSlider, color: UIColor.red)
-        setupSlider(slider: greenSlider, color: UIColor.green)
-        setupSlider(slider: blueSlider, color: UIColor.blue)
+        setupSlider(slider: redSlider, color: .red)
+        setupSlider(slider: greenSlider, color: .green)
+        setupSlider(slider: blueSlider, color: .blue)
     }
     
     private func setupSlider(slider: UISlider, color: UIColor) {
         slider.minimumTrackTintColor = color
         slider.maximumTrackTintColor = .lightGray
-        slider.setValue(Float.random(in: 0.0..<1.0), animated: false)
+        
+    }
+    
+    private func selectColor() {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        
+        selectedColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
+        
+        redSlider.setValue(Float(red), animated: false)
+        greenSlider.setValue(Float(green), animated: false)
+        blueSlider.setValue(Float(blue), animated: false)
     }
     
     private func changeColor() {
@@ -114,6 +149,11 @@ final class ViewController: UIViewController {
     }
     
     private func changeText() {
+        changeTextLabel()
+        changeTextField()
+    }
+    
+    private func changeTextLabel() {
         let redText = floatString(redSlider.value)
         let greenText = floatString(greenSlider.value)
         let blueText = floatString(blueSlider.value)
@@ -121,6 +161,12 @@ final class ViewController: UIViewController {
         redLabel.text = redText
         greenLabel.text = greenText
         blueLabel.text = blueText
+    }
+    
+    private func changeTextField() {
+        let redText = floatString(redSlider.value)
+        let greenText = floatString(greenSlider.value)
+        let blueText = floatString(blueSlider.value)
         
         redTextField.text = redText
         greenTextField.text = greenText
@@ -156,17 +202,11 @@ final class ViewController: UIViewController {
         return String(format: "%.2f", value)
     }
     
-    // MARK: - IBActions
-    
-    @IBAction func changeColorAction() {
-        changeColor()
-    }
-    
 }
 
 // MARK: - Text Field Delegate
 
-extension ViewController: UITextFieldDelegate {
+extension SettingColorViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         changeSliderValue()
