@@ -37,7 +37,10 @@ final class SettingColorViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private let digitalFont = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .regular)
+    private let digitalFont = UIFont.monospacedDigitSystemFont(
+        ofSize: 14,
+        weight: .regular
+    )
     
     // MARK: - Lifecycle
     
@@ -145,7 +148,12 @@ final class SettingColorViewController: UIViewController {
         let green = CGFloat(greenSlider.value)
         let blue = CGFloat(blueSlider.value)
         
-        colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        colorView.backgroundColor = UIColor(
+            red: red,
+            green: green,
+            blue: blue,
+            alpha: 1
+        )
     }
     
     private func changeText() {
@@ -191,7 +199,11 @@ final class SettingColorViewController: UIViewController {
     }
     
     private func showError(_ message: String) {
-        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Ошибка",
+            message: message,
+            preferredStyle: .alert
+        )
         let okAction = UIAlertAction(title: "Ок", style: .default)
         alert.addAction(okAction)
         
