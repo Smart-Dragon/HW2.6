@@ -23,6 +23,8 @@ final class MainViewController: UIViewController {
         setupUI()
     }
     
+    // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == settingColorSegue {
             let settingController = segue.destination as! SettingColorViewController
