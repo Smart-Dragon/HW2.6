@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SettingColorProtocol {
+protocol SettingColorDelegate {
     
     func setColor(_ color: UIColor)
     

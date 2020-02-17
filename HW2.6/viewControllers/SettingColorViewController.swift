@@ -32,7 +32,7 @@ final class SettingColorViewController: UIViewController {
     
     // MARK: - Public Properties
     
-    var delegate: SettingColorProtocol!
+    var delegate: SettingColorDelegate!
     var selectedColor: UIColor = .white
     
     // MARK: - Private Properties

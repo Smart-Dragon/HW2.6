@@ -15,7 +15,7 @@
 		9B0D54EA23E4701B000B2AE9 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D54E923E4701B000B2AE9 /* UITextField.swift */; };
 		9B0D54EC23E47A9F000B2AE9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D54EB23E47A9F000B2AE9 /* UIViewController.swift */; };
 		9BAD8CCB23FA854200DCE0AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD8CCA23FA854200DCE0AE /* MainViewController.swift */; };
-		9BAD8CCF23FA865000DCE0AE /* SettingColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD8CCE23FA865000DCE0AE /* SettingColorProtocol.swift */; };
+		9BAD8CCF23FA865000DCE0AE /* SettingColorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD8CCE23FA865000DCE0AE /* SettingColorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		9B0D54E923E4701B000B2AE9 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		9B0D54EB23E47A9F000B2AE9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9BAD8CCA23FA854200DCE0AE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		9BAD8CCE23FA865000DCE0AE /* SettingColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingColorProtocol.swift; sourceTree = "<group>"; };
+		9BAD8CCE23FA865000DCE0AE /* SettingColorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingColorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 		9BAD8CCD23FA863400DCE0AE /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9BAD8CCE23FA865000DCE0AE /* SettingColorProtocol.swift */,
+				9BAD8CCE23FA865000DCE0AE /* SettingColorDelegate.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 				9B0D54D523E44A09000B2AE9 /* AppDelegate.swift in Sources */,
 				9B0D54EA23E4701B000B2AE9 /* UITextField.swift in Sources */,
 				9B0D54EC23E47A9F000B2AE9 /* UIViewController.swift in Sources */,
-				9BAD8CCF23FA865000DCE0AE /* SettingColorProtocol.swift in Sources */,
+				9BAD8CCF23FA865000DCE0AE /* SettingColorDelegate.swift in Sources */,
 				9BAD8CCB23FA854200DCE0AE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

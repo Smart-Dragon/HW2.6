@@ -44,7 +44,9 @@ final class MainViewController: UIViewController {
 
 }
 
-extension MainViewController: SettingColorProtocol {
+// MARK: - Setting Color Delegate
+
+extension MainViewController: SettingColorDelegate {
     
     func setColor(_ color: UIColor) {
         view.backgroundColor = color
